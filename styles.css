@@ -1,0 +1,280 @@
+@import 'https://fonts.googleapis.com/css?family=Lora:400,600';
+
+*,::before,::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red;  */
+}
+body {
+  background-color: #F5EACF; /* For browsers that do not support gradients */
+  background-image: linear-gradient (#CEB793, #F5EACF, #CEB793);
+  
+  font-family: 'lora', sans-serif;
+  color: #783939
+}
+.page{
+  position: relative;
+}
+li{
+  list-style: none;
+}
+a:link {
+color: #F5EACF;
+text-decoration: none;
+}
+a:visited{
+  color: #CEB793;
+  text-decoration: none;
+}
+
+
+.container{
+  max-width: 1000px;
+  width: 100%
+  margin: 0 auto;
+}
+.button{
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  color: #783939;
+  text-transform: uppercase;
+  border: 3px #783939 solid;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+.grid{
+  display: flex;
+}
+header{
+  position:fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #397878
+}
+#header-img{
+  width: 150px;
+}
+/* media queries */
+@media (max-width: 600px) {
+  header{
+    flex-wrap: wrap;
+  }
+}
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px){
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+@media (max-width: 650px){
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+nav{
+  font-weight: 400;
+}
+@media (max-width: 650px) {
+  nav{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li{
+    padding-bottom: 5px;
+  }
+}
+nav > ul{
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 650px){
+  nav > ul {
+    flex-direction: column;
+  }
+}
+#call-to-action{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 200px;
+}
+#call-to-action > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+#call-to-action > p {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+#call-to-action input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+#call-to-action input[type='submit']{
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color:#CEB793;
+}
+
+/* hover effect?*/
+
+@media (max-width: 650px){
+  #call-to-action{
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 600px){
+  #call-to-action{
+    margin-top: 300px;
+  }
+}
+
+#options{
+  margin-top: 30px;
+}
+#options .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: #397878;
+}
+@media(max-width: 550px){
+  #options .icon{
+    display: none;
+  }
+}
+#options .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+@media (max-width: 650px) {
+  #options {
+    margin-top: 0;
+  }
+}
+/* @media (max-width: 800px){
+  .grid{
+    flex-direction: column;
+  }
+} */
+#lesson_example {
+  margin-top:100px;
+  display: flex;
+  justify-content: center;
+}
+
+#lesson_example > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#store{
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.product > .item {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.product > h2{
+  margin-top: 15px;
+}
+.product > ol{
+  margin: 15px 0;
+}
+.product > li{
+  padding: 5px 0;
+}
+@media (max-width: 800px){
+  #store{
+    flex-direction: column;
+  }
+  .product{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+footer {
+  margin-top: 30px;
+  background-color: #397878;
+  
+  padding: 20px;
+}
+footer > ul{
+  display: flex;
+  justify-content: center;
+}
+footer > ul > li{
+  padding: 0 15px;
+  
+}
+footer > span{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+  color: #F5EACF;
+}
